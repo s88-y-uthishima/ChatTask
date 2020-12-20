@@ -1,0 +1,170 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+/* header */
+header {
+  width: 100vw;
+  background: #b7ec8c;
+  padding: 10px;
+}
+
+footer {
+  width: 100vw;
+  background: #b7ec8c;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+}
+
+.header_menu {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  color: rgb(12, 13, 70);
+}
+
+a {
+  color: rgb(12, 13, 70);
+}
+
+.header_menu_title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header_menu_inner {
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+
+.header_menu_inner.listNew::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f044";
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 20px;
+} 
+
+/* button */
+.submitBtn {
+  background: #29b744;
+  color: #fff;
+  width: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 90px;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  opacity: 0.6;
+}
+
+/* sign_up */
+.signupPage {
+  margin-top: 10vh;
+}
+
+.titleArea {
+ text-align: center;
+}
+
+.form-group {
+  margin: 0 auto 1.5rem auto;
+  max-width: 500px;
+}
+
+.form-control {
+  background: #f6f8fa;
+}
+
+/* devise_shared_links
+.acountPage_link {
+   & > a {
+     color: #0075c1;
+  }
+} */
+
+/* sign_in */
+.signinPage {
+  margin-top: 10vh;
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+}
+
+.loginBtn {
+  padding: 12px;
+  width: 200px;
+  border-radius: 21px;
+  background: #29b744;
+  color: #fff;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+  opacity: 1;
+  transition: opacity .5s;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  opacity: 0.7;
+}
+
+.form {
+  width: 100vw;
+  background: #b7ec8c;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  width:250px;
+  height: 40px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.form-message {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 10px;
+  margin: auto 0;
+  font-size: 18px;
+}

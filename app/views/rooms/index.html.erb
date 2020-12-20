@@ -1,3 +1,4 @@
+<h1>Chat room</h1>
 <div>
   <ul>
     <% @rooms.each do |room| %>
@@ -5,3 +6,7 @@
     <% end %>
   </ul>
 </div>
+<div>
+<%= link_to "新規ROOM作成", new_room_path %>
+</div>
+<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>

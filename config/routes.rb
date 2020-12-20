@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   devise_for :users
   root 'rooms#index'
 
-  resources :room, only: :show
+  resources :rooms, only: [:new, :create, :show]
 end

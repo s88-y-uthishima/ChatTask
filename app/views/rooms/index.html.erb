@@ -1,0 +1,12 @@
+<h1>Chat room</h1>
+<div>
+  <ul>
+    <% @rooms.each do |room| %>
+      <li><%= link_to "ROOM#{room.id}", room_path(room) %></li>
+    <% end %>
+  </ul>
+</div>
+<div>
+<%= link_to "新規ROOM作成", new_room_path %>
+</div>
+<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>

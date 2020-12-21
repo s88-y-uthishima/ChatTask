@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:edit, :update, :destroy]
+  before_action :set_room, only: [:edit, :update, :destroy]
 
   def new
     @task = Task.new
@@ -37,7 +38,10 @@ class TasksController < ApplicationController
   end
   
   def set_task
-    @room = Room.find(params[:room_id])
     @task = Task.find(params[:id])
+  end
+  
+  def set_room
+  @room = Room.find(params[:room_id])
   end
 end

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'rooms#index'
 
   resources :rooms, only: [:new, :create, :show] do
-    resources :tasks, only: [:new, :create, :destroy, :edit, :update]
+    resources :tasks, only: [:new, :create, :destroy, :edit, :update] do
+      resources :cards, except: :index 
+    end
   end
 end

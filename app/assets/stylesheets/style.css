@@ -276,3 +276,97 @@ a {
 .addCard_link {
   color: #8c8c8c;
 }
+
+.new_list {
+  max-width: 500px;
+  margin: 100px auto 0;
+}
+
+.taskForm {
+  max-width: 500px;
+  margin: 100px auto 0;
+}
+
+.cardnewForm {
+  max-width: 500px;
+  margin: 70px auto 0;
+}
+
+.cardnewForm_title {
+  margin-bottom: 30px;
+}
+
+.cardnewForm_address {
+  margin-bottom: 30px;
+}
+
+.cardeditForm {
+  max-width: 500px;
+  margin: 70px auto 0;
+}
+
+.cardeditForm_title {
+  margin-bottom: 30px;
+}
+
+.cardeditForm_address {
+  margin-bottom: 30px;
+}
+
+.cardeditForm_memo {
+  margin-bottom: 30px;
+}
+
+.cardContents {
+  margin: 60px auto 0;
+  max-width: 600px;
+}
+
+.cardContents_title {
+  font-size: 22px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.cardContents_address {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.cardContents_memo {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.cardContents_taskStatus {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.cardContents_btnArea {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cardContents_btnArea a {
+  display: block;
+}
+
+.edit_btn {
+  max-width: 200px;
+  margin: 0 auto;
+  background: #026aa7;
+  padding: 7px;
+  border-radius: 10px;
+  color: #fff;
+  transition: opacity 0.5s;
+  text-decoration: none;
+}
+
+.edit_btn:hover {
+  opacity: 0.7;
+}
+
+.delete_btn {
+  margin-top: 20px;
+}

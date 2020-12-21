@@ -168,3 +168,111 @@ a {
   margin: auto 0;
   font-size: 18px;
 }
+
+.topPage {
+  background: #bababa;
+  width: 100%;
+  min-height: 93vh;
+  overflow-x: scroll;
+  display: flex;
+}
+
+.taskWrapper {
+  width: calc( 100vw - 30% );
+  height: 660px;
+  background: #bababa;
+  display: flex;
+  align-items: baseline;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+.chatWrapper {
+  background: #fce890;
+  width: 30%;
+  overflow: auto;
+  height: 660px;
+}
+
+  /* & h1 {
+    text-align: center;
+    color: #272727; 
+  } */
+  .message {
+    margin-left: 20px;
+  }
+
+.task {
+  position: relative;
+  background: #e2e4e6;
+  padding: 10px;
+  margin: 20px 0 20px 20px;
+  min-width: 250px;
+}
+
+.task:last-child {
+  margin-right: 20px;
+}
+
+.task_header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task_header_title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.fa-pen {
+  font-size: 18px;
+  color: #8c8c8c;
+}
+
+.fa-trash {
+  font-size: 18px;
+  color: #8c8c8c;
+  margin-right: 10px;
+}
+
+.cardWrapper {
+  overflow-y: scroll;
+  max-height: 76vh;
+}
+
+.cardDetail_link {
+  text-decoration: none;
+  color: #323232;
+}
+
+.card {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card_title {
+  font-size: 17px;
+}
+
+.card_detail {
+  display: none;
+}
+
+.is-exist {
+  display: block;
+  color: #999;
+}
+
+.fas-bars {
+    display: block;
+  }
+
+.addCard {
+  color: #8c8c8c;
+}
+  
+.addCard_link {
+  color: #8c8c8c;
+}

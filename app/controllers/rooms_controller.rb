@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to :root 
+      redirect_to room_path(@room)
     else
       render :new
     end
@@ -21,6 +21,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @messages = @room.messages
+    @tasks = Task.where(room: @room).order("created_at ASC")
   end
 
   private

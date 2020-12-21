@@ -1,8 +1,25 @@
-<div class='message'>
-  <p><%= "#{message.user.email}: #{message.content}" %></p>
-</div>
-<div class='task'>
-  <%= link_to new_room_task_path(@room), class: "nav-link" do %>
-  <span class="mr-1">リストを作成</span>
-  <% end %>
+<div class="topPage">
+  <div class="chatWrapper">
+    <div class='message'>
+      <p><%= "#{message.user.email}: #{message.content}" %></p>
+    </div>
+  </div>
+  <div class="taskWrapper">
+    <% @tasks.each do |task| %>
+      <div class="task">
+        <div class="task_header">
+          <h2 class="task_header_title"><%= task.title %></h2>
+          <div class="task_header_action">
+            <%= link_to(content_tag(:i,'', class: 'fas fa-pen'), edit_room_task_path(task))%>
+            <%= link_to(content_tag(:i,'', class: 'fas fa-trash'), room_task_path(task), method: :delete, data: { confirm: "#{task.title}を削除して大丈夫ですか？" }) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class='task_new'>
+      <%= link_to new_room_task_path(@room), class: "nav-link" do %>
+      <span class="mr-1">リストを作成</span>
+      <% end %>
+    </div>
+  </div>
 </div>

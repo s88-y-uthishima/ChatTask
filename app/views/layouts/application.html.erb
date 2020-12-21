@@ -7,9 +7,14 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/0f60841517.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <div class="wrap">
+    <%= render 'partial/header' if current_user %>
     <%= yield %>
+    <footer></footer>
+    </div>
   </body>
 </html>

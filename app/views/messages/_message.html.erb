@@ -1,4 +1,41 @@
-<div class='message'>
-  <%# 投稿者を特定できるようにメールアドレスを表示させておく %>
-  <p><%= "#{message.user.email}: #{message.content}" %></p>
+<div class="topPage">
+  <div class="chatWrapper">
+    <div class='message'>
+      <p><%= "#{message.user.email}: #{message.content}" %></p>
+    </div>
+  </div>
+  <div class="taskWrapper">
+    <% @tasks.each do |task| %>
+      <div class="task">
+        <div class="task_header">
+          <h2 class="task_header_title"><%= task.title %></h2>
+          <div class="task_header_action">
+            <%= link_to(content_tag(:i,'', class: 'fas fa-pen'), edit_room_task_path(@room.id, task.id))%>
+            <%= link_to(content_tag(:i,'', class: 'fas fa-trash'), room_task_path(@room.id, task.id), method: :delete, data: { confirm: "#{task.title}を削除して大丈夫ですか？" }) %>
+          </div>
+        </div>
+        <div class="cardWrapper">
+          <% task.cards.each do |card| %>
+            <%= link_to room_task_card_path(@room.id, task.id, card.id), class: "cardDetail_link" do %>
+              <div class="card">
+                <h3 class="card_title"><%= card.title %> 様</h3>
+                <% if card.memo.size > 0 %>
+                  <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
+                <% end %>
+              </div>
+            <% end %>
+          <% end %>
+          <div class="addCard">
+            <i class="far fa-push-square"></i>
+            <%= link_to "カードを追加", new_room_task_card_path(@room, task), class: "addCard_link" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class='task_new'>
+      <%= link_to new_room_task_path(@room), class: "nav-link" do %>
+      <span class="mr-1">リストを作成</span>
+      <% end %>
+    </div>
+  </div>
 </div>

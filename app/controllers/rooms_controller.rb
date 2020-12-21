@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to :root 
+      redirect_to room_path(@room)
     else
       render :new
     end
@@ -21,10 +21,11 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @messages = @room.messages
+    @tasks = Task.where(room: @room).order("created_at ASC")
   end
 
   private
   def room_params
-    params.require(:room).permit(:name).merge(user_id: current_user.id, room_id: room.id)
+    params.require(:room).permit(:name)
   end
 end

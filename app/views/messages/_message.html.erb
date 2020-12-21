@@ -1,4 +1,8 @@
 <div class='message'>
-  <%# 投稿者を特定できるようにメールアドレスを表示させておく %>
   <p><%= "#{message.user.email}: #{message.content}" %></p>
+</div>
+<div class='task'>
+  <%= link_to new_room_task_path(@room), class: "nav-link" do %>
+  <span class="mr-1">リストを作成</span>
+  <% end %>
 </div>

@@ -2,6 +2,7 @@
   <div class="chatWrapper">
     <div class='message'>
       <p><%= "#{message.user.email}: #{message.content}" %></p>
+      <p><%= message.content %> (<%= link_to message.user.name, user_path(message.user_id) %>)</p>
     </div>
   </div>
   <div class="taskWrapper">

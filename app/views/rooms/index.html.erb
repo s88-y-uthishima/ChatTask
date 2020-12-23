@@ -1,12 +1,15 @@
-<h1>Chat room</h1>
-<div>
-  <ul>
-    <% @rooms.each do |room| %>
-      <li><%= link_to "ROOM#{room.id}", room_path(room) %></li>
-    <% end %>
-  </ul>
+<div class="main">
+  <div class="inner">
+    <div class="form_wrapper">
+      <h1 class="page_heading">店舗を選択してください</h1>
+      <ul class="actions">
+        <% @rooms.each do |room| %>
+          <li class="room_name"><%= link_to "#{room.id}：#{room.name}", room_path(room) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="newRoom">
+    <%= link_to "新規ROOM作成", new_room_path %>
+    </div>
+  </div>
 </div>
-<div>
-<%= link_to "新規ROOM作成", new_room_path %>
-</div>
-<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>

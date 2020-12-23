@@ -1,13 +1,15 @@
-<div class="listnewPage">
+<div class="tasknewPage">
   <div class="container">
+    <h1 class="title">タスクを新規作成</h1>
     <%= form_with model: @task , url: { action: :create }, class: "new_list", local: true do |f| %>
       <% if @task.errors.any? %>
-        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        <p class="text-danger">タスク名は1～255文字以内で入力してください</p>
       <% end %>
-      <%= f.label :title %>
-      <%#= hidden_field_tag :room_id, @room.id  %>
-      <%= f.text_field :title, autofocus: true, class: "form-control listName", placeholder: "タスク名" %>
-      <div class="text-center"><%= f.submit "作成", class: "submitBtn" %></div>
+      <div class="form-group">
+        <%= f.label :タスク名 %><br />
+        <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "タスク名を入力してください（必須）" %>
+      </div>
+      <div class="form-group text-center"><%= f.submit "作成", class: "submitBtn" %></div>
     <% end %>
   </div>
 </div>

@@ -1,13 +1,9 @@
 <header class="header">
   <nav class="nav">
     <ul class="header_menu">
-      <li class="nav-link"><%= current_user.name %>さん</li>
-      <li class="header_menu_title"><%= link_to "Task Chat", root_path, class: "nav-link" %></li>
-      <li>
-        <div class="header_menu_inner">
-          <%= link_to "サインアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </div>
-      </li>
+      <li class="header_menu_left "><%= current_user.name %>さん</li>
+      <li class="header_menu_title"><%= link_to "Task Chat", root_path %></li>
+      <li class="header_menu_right"><%= link_to "サインアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
   </nav>
 </header>

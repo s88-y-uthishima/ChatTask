@@ -1,24 +1,73 @@
-# README
+# アプリ名
+ChatTask
+# 概要
+リアルタイムチャット機能　＋　タスク共有管理機能
+# 本番環境
+# 制作背景（意図）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DEMO
+# 工夫したポイント
+# 使用技術(開発環境)
+# 課題や今後実装したい機能
+# DB設計
 
-Things you may want to cover:
+## users テーブル
 
-* Ruby version
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| name               | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :messages
 
-* Database creation
+## rooms テーブル
 
-* Database initialization
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| name                | string     | null: false                    |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+has_many :messages
+has_many :tasks
 
-* Deployment instructions
+## messages テーブル
 
-* ...
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | text       |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :user
+belongs_to :room
+
+## tasks テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| title  | string     | null: false                    |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :room
+has_many :cards
+
+## cards テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| title   | string     | null: false                    |
+| address | string     | null: false                    |
+| memo    | text       |                                |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+
+belongs_to :task

@@ -1,12 +1,13 @@
+<h1 class= "roomName"><%="#{@room.name}"%></h1>
 <div class="topPage">
   <div class="chatWrapper">
-    <h1>Chat room</h1>
-    <div id='messages' data-room_id="<%= @room.id %>">
+    <div class="title">Chat Space</div>
+    <div class="messages" id='messages' data-room_id="<%= @room.id %>">
       <%= render @messages %>
     </div>
     <div class="form">
       <%= text_field_tag :content, nil, data: { behavior: 'room_speaker' } %>
-      <%= label_tag :content, '入力後Enterを押してください' %>
+      <%= label_tag :content, '入力後Enterを押してください', class: "form_tag" %>
     </div>
   </div>
   <div class="taskWrapper">

@@ -42,6 +42,6 @@ class TasksController < ApplicationController
   end
   
   def set_room
-  @room = Room.find(params[:room_id])
+    @room = Room.find(params[:room_id])
   end
 end

@@ -8,23 +8,27 @@ h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
   margin: 0;
 }
-
 ul,li {
   padding: 0;
   margin: 0;
+  list-style: none;
+  color: rgb(12, 13, 70);
 }
-
+a {
+  color: rgb(12, 13, 70);
+}
 /* header */
 header {
   width: 100vw;
-  background: #b7ec8c;
-  padding: 10px;
+  background-image: url("/green_00058.jpg");
+  padding: 10px 0;
+  margin: auto 0;
 }
 
 footer {
   width: 100vw;
-  background: #b7ec8c;
-  padding: 10px;
+  height: 40px;
+  background-image: url("/green_00058.jpg");
   position: fixed;
   bottom: 0;
   z-index: 9;
@@ -39,16 +43,9 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
-
-li {
-  list-style: none;
-  color: rgb(12, 13, 70);
+.header_menu_left {
+  padding-left: 20px;
 }
-
-a {
-  color: rgb(12, 13, 70);
-}
-
 .header_menu_title {
   position: absolute;
   left: 50%;
@@ -57,20 +54,52 @@ a {
   font-size: 25px;
   font-weight: bold;
 }
-
-.header_menu_inner {
-  display: flex;
-  padding: 0;
-  align-items: center;
+.header_menu_right {
+  padding-right: 20px;
 }
 
-.header_menu_inner.listNew::after {
+/* .listNew::after {
   font-family: "Font Awesome 5 Free";
   content: "\f044";
   display: inline-block;
   margin-left: 10px;
   font-size: 20px;
-} 
+}  */
+
+/* rooms#index&new */
+.main {
+  background-image: url("/white_00055.jpg");
+  height: calc(100vh - 60px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page_heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  margin: auto;
+}
+.newRoom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 20px;
+  margin-top: 20px;
+}
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+  font-size: large;
+}
 
 /* button */
 .submitBtn {
@@ -92,37 +121,48 @@ a {
 .signupPage {
   margin-top: 10vh;
 }
-
-.titleArea {
- text-align: center;
+.text-center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
+.new_user {
+display: flex;
+align-items: center;
+flex-direction: column;
+}
 .form-group {
   margin: 0 auto 1.5rem auto;
   max-width: 500px;
 }
-
 .form-control {
   background: #f6f8fa;
 }
-
-/* devise_shared_links
-.acountPage_link {
-   & > a {
-     color: #0075c1;
-  }
-} */
-
+input[type="email"] {
+  width: 300px;
+  height: 40px;
+  font-size: large;
+}
+input[type="password"] {
+  width: 300px;
+  height: 40px;
+  font-size: large;
+}
 /* sign_in */
 .signinPage {
   margin-top: 10vh;
 }
-
 .title {
   margin: 0;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
 }
-
+.signupForm {
+display: flex;
+align-items: center;
+flex-direction: column;
+}
 .loginBtn {
   padding: 12px;
   width: 200px;
@@ -136,68 +176,54 @@ a {
   transition: opacity .5s;
   cursor: pointer;
 }
-
 .loginBtn:hover {
   opacity: 0.7;
 }
 
+/* rooms#show */
+.topPage {
+  background-image: url(/japanese-paper_00192.jpg);
+  width: 100%;
+  height: calc(100vh - 175px);
+  /* overflow-x: scroll; */
+  display: flex;
+}
+.chatWrapper {
+  width: 350px;
+}
+
+.messages {
+  overflow: auto;
+  height: calc(100% - 93px);
+}
+.roomName {
+  padding-top: 10px;
+  border-bottom:  #ececec 5px solid;
+  text-align: center;
+  background-image: url(/japanese-paper_00192.jpg);
+}
+.taskWrapper {
+  width: calc( 100vw - 350px );
+  display: flex;
+  align-items: baseline;
+  overflow-y: auto;
+  white-space: nowrap;
+  z-index: 10;
+}
 .form {
   width: 100vw;
-  background: #b7ec8c;
+  background-image: url(/green_00058.jpg);
   padding: 10px;
   position: fixed;
   bottom: 0;
   z-index: 10;
   display: flex;
 }
-
-.form-input {
-  background-color: white;
-  width:250px;
-  height: 40px;
-  font-size: 18px;
-  margin-top: 5px;
+.form_tag {
+  font-size: large;
+  font-weight: bold;
+  margin: auto 10px;
 }
-
-.form-message {
-  border: none;
-  height: 50px;
-  width: 100%;
-  padding-top: 12px;
-  padding-left: 10px;
-  margin: auto 0;
-  font-size: 18px;
-}
-
-.topPage {
-  background: #bababa;
-  width: 100%;
-  min-height: 93vh;
-  overflow-x: scroll;
-  display: flex;
-}
-
-.taskWrapper {
-  width: calc( 100vw - 30% );
-  height: 660px;
-  background: #bababa;
-  display: flex;
-  align-items: baseline;
-  overflow-y: auto;
-  white-space: nowrap;
-}
-
-.chatWrapper {
-  background: #fce890;
-  width: 30%;
-  overflow: auto;
-  height: 660px;
-}
-
-  /* & h1 {
-    text-align: center;
-    color: #272727; 
-  } */
   .message {
     margin-left: 20px;
   }

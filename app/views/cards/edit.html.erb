@@ -1,24 +1,25 @@
 <div class="cardeditPgae">
   <div class='container'>
+    <h1 class="title">患者カード編集</h1>
     <%= form_with model: @card, url: { action: :update }, html: { class: 'cardeditForm' }, local: true do |f| %>
       <% if @card.errors.any? %>
-        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        <p class="text-danger">1～255文字以内で入力してください</p>
       <% end %>
       <div class="cardeditForm_title">
-        <%= f.label :患者名 %>
+        <%= f.label :患者名 %><br />
         <%= f.text_field :title, class: "form-control", placeholder: "必須" %>
       </div>
       <div class="cardeditForm_address">
-        <%= f.label :住所 %>
+        <%= f.label :住所 %><br />
         <%= f.text_field :address, class: "form-control", placeholder: "必須" %>
       </div>
       <div class="cardeditForm_memo">
-        <%= f.label :memo %>
+        <%= f.label :詳細 %><br />
         <%= f.text_area :memo, class: "form-control", placeholder: "詳細" %>
       </div>
       <div class="cardeditForm_memo">
-        <label>タスク名</label>
-        <%= select :card, :task_id, @tasks.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' } %>
+        <label>タスク名</label><br />
+        <%= select :card, :task_id, @tasks.map{ |l| [l.title, l.id] }, {}, { class: 'form-control task_select' } %>
       </div>
       <div class="text-center"><%= f.submit "更新する", class: "submitBtn" %></div>
     <% end %>

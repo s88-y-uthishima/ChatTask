@@ -1,21 +1,22 @@
 <div class="cardnewPgae">
   <div class='container'>
+    <h1 class="title">患者カード新規作成</h1>
     <%= form_with model: @card, url: { action: :create }, html: { class: 'cardnewForm' }, local: true do |f| %>
       <%= f.hidden_field :task_id, value: @task.id %>
       <% if @card.errors.any? %>
         <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
       <% end %>
       <div class="cardnewForm_title">
-       <%= f.label :患者名 %>
-        <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "必須" %>
+       <%= f.label :患者名 %><br />
+        <%= f.text_field :title, autofocus: true, class: "form-control", placeholder: "患者名を入力してください（必須）" %>
       </div>
       <div class="cardnewForm_address">
-        <%= f.label :住所 %>
-        <%= f.text_field :address, autofocus: true, class: "form-control", placeholder: "必須" %>
+        <%= f.label :住所 %><br />
+        <%= f.text_field :address, autofocus: true,  class: "form-control", placeholder: "患者住所を入力してください（必須）" %>
       </div>
       <div class="cardnewForm_memo">
-        <%= f.label :memo %>
-        <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細" %>
+        <%= f.label :詳細 %><br />
+        <%= f.text_area :memo, autofocus: true, class: "form-control", placeholder: "詳細を入力してください" %>
       <div class="text-center"><%= f.submit "作成する", class: "submitBtn" %></div>
       </div>
     <% end %>

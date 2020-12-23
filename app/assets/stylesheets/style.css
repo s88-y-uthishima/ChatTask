@@ -17,14 +17,13 @@ ul,li {
 a {
   color: rgb(12, 13, 70);
 }
-/* header */
+/* layouts */
 header {
   width: 100vw;
   background-image: url("/green_00058.jpg");
   padding: 10px 0;
   margin: auto 0;
 }
-
 footer {
   width: 100vw;
   height: 40px;
@@ -33,7 +32,10 @@ footer {
   bottom: 0;
   z-index: 9;
 }
-
+body {
+  background-image: url("/white_00055.jpg");
+}
+/* header */
 .header_menu {
   display: flex;
   width: 100%;
@@ -82,9 +84,6 @@ footer {
   margin: 30px auto;
 }
 .actions {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   font-size: 20px;
   margin: auto;
 }
@@ -100,7 +99,10 @@ input[type="text"] {
   height: 40px;
   font-size: large;
 }
-
+.room_name {
+  padding: 10px auto;
+  margin: 10px auto;
+}
 /* button */
 .submitBtn {
   background: #29b744;
@@ -112,11 +114,9 @@ input[type="text"] {
   transition: opacity 0.5s;
   cursor: pointer;
 }
-
 .submitBtn:hover {
   opacity: 0.6;
 }
-
 /* sign_up */
 .signupPage {
   margin-top: 10vh;
@@ -147,6 +147,10 @@ input[type="password"] {
   width: 300px;
   height: 40px;
   font-size: large;
+}
+.container{
+   padding-top: 30px;
+   padding-bottom: 45px;
 }
 /* sign_in */
 .signinPage {
@@ -179,19 +183,16 @@ flex-direction: column;
 .loginBtn:hover {
   opacity: 0.7;
 }
-
 /* rooms#show */
 .topPage {
   background-image: url(/japanese-paper_00192.jpg);
   width: 100%;
   height: calc(100vh - 175px);
-  /* overflow-x: scroll; */
   display: flex;
 }
 .chatWrapper {
   width: 350px;
 }
-
 .messages {
   overflow: auto;
   height: calc(100% - 93px);
@@ -201,14 +202,6 @@ flex-direction: column;
   border-bottom:  #ececec 5px solid;
   text-align: center;
   background-image: url(/japanese-paper_00192.jpg);
-}
-.taskWrapper {
-  width: calc( 100vw - 350px );
-  display: flex;
-  align-items: baseline;
-  overflow-y: auto;
-  white-space: nowrap;
-  z-index: 10;
 }
 .form {
   width: 100vw;
@@ -224,160 +217,173 @@ flex-direction: column;
   font-weight: bold;
   margin: auto 10px;
 }
-  .message {
-    margin-left: 20px;
-  }
-
+.message {
+  margin-left: 20px;
+}
+.taskWrapper {
+  width: calc( 100vw - 350px );
+}
+.taskContainer {
+  white-space: nowrap;
+  align-items: baseline;
+  z-index: 10;
+  display: flex;
+  overflow-y: auto;
+  height: 500px;
+}
+.task_new {
+  font-size: medium;
+  margin-left: 10px;
+}
 .task {
   position: relative;
-  background: #e2e4e6;
+  background-image: url(/texture_00004.jpg);
   padding: 10px;
   margin: 20px 0 20px 20px;
   min-width: 250px;
 }
-
 .task:last-child {
   margin-right: 20px;
 }
-
 .task_header {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .task_header_title {
   font-size: 20px;
   margin: 0;
+  color: #262938;
 }
-
 .fa-pen {
   font-size: 18px;
-  color: #8c8c8c;
+  color: #262938;
 }
-
 .fa-trash {
   font-size: 18px;
-  color: #8c8c8c;
+  color: #262938;
   margin-right: 10px;
 }
-
 .cardWrapper {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 76vh;
 }
-
 .cardDetail_link {
   text-decoration: none;
   color: #323232;
 }
-
 .card {
+  background-image: url(/texture_00010.jpg);
   margin-bottom: 10px;
   padding: 10px;
 }
-
 .card_title {
   font-size: 17px;
 }
-
 .card_detail {
   display: none;
 }
-
 .is-exist {
   display: block;
-  color: #999;
+  color: #262938;
 }
-
 .fas-bars {
     display: block;
   }
-
-.addCard {
-  color: #8c8c8c;
-}
-  
 .addCard_link {
-  color: #8c8c8c;
+  color: #262938;
 }
-
 .new_list {
-  max-width: 500px;
-  margin: 100px auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-
-.taskForm {
-  max-width: 500px;
-  margin: 100px auto 0;
+.tasknewPage{
+  height: calc(100vh - 60px);
+  background-image: url(/white_00055.jpg);
 }
-
 .cardnewForm {
-  max-width: 500px;
-  margin: 70px auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
 }
-
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+  font-size: larger;
+}
+.taskForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .cardnewForm_title {
   margin-bottom: 30px;
 }
-
 .cardnewForm_address {
   margin-bottom: 30px;
 }
-
-.cardeditForm {
-  max-width: 500px;
-  margin: 70px auto 0;
+.cardDetailPage {
+  margin-bottom: 70px;
 }
-
-.cardeditForm_title {
-  margin-bottom: 30px;
-}
-
-.cardeditForm_address {
-  margin-bottom: 30px;
-}
-
-.cardeditForm_memo {
-  margin-bottom: 30px;
-}
-
 .cardContents {
   margin: 60px auto 0;
   max-width: 600px;
+  font-size: 20px;
 }
-
 .cardContents_title {
   font-size: 22px;
   border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
+ }
+.datespot-title {
+  padding: 0;
 }
-
 .cardContents_address {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
+  margin: 30px auto;
 }
-
 .cardContents_memo {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 30px;
+  margin: 30px auto;
 }
-
 .cardContents_taskStatus {
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
 }
-
 .cardContents_btnArea {
   margin-top: 40px;
   text-align: center;
 }
-
 .cardContents_btnArea a {
   display: block;
 }
-
+.map {
+  border: rgb(189, 190, 170) solid 5px;
+  width: 620px;
+  height: 350px;
+}
+.cardeditForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cardeditForm_title {
+  margin-bottom: 10px;
+}
+.cardeditForm_address {
+  margin-bottom: 10px;
+}
+.cardeditForm_memo {
+  margin-bottom: 10px;
+}
+.task_select {
+  width: 300px;
+  height: 40px;
+  font-size: larger;
+}
 .edit_btn {
   max-width: 200px;
   margin: 0 auto;
@@ -388,11 +394,9 @@ flex-direction: column;
   transition: opacity 0.5s;
   text-decoration: none;
 }
-
 .edit_btn:hover {
   opacity: 0.7;
 }
-
 .delete_btn {
   margin-top: 20px;
 }

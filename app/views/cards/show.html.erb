@@ -58,7 +58,7 @@
         });
       }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZRy6gl-DSwkdqOJ0mueeYRVWglY6rDg&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
     <div class="cardContents_memo">
       <div>メモ</div>
       <div><%= @card.memo %></div>

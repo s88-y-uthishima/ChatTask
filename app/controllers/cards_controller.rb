@@ -38,6 +38,7 @@ class CardsController < ApplicationController
   end
 
   private
+
   def card_params
     params.require(:card).permit(:title, :address, :memo, :task_id)
   end

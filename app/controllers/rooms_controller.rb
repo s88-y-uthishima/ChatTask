@@ -21,10 +21,11 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @messages = @room.messages
-    @tasks = Task.where(room: @room).order("created_at ASC")
+    @tasks = Task.where(room: @room).order('created_at ASC')
   end
 
   private
+
   def room_params
     params.require(:room).permit(:name)
   end

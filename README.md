@@ -55,6 +55,9 @@ https://chattask32038.herokuapp.com/<br />
 ### 患者カード編集画面
 ![cards_edit](https://user-images.githubusercontent.com/73882646/103120776-87bc6980-46bc-11eb-9b0a-2e8fa3babf71.png)
 - 患者カードの編集画面です。情報を変更後、更新するを押すことでルーム画面へ移動します。
+### 画面遷移図
+<img width="788" alt="diagram" src="https://user-images.githubusercontent.com/73882646/103133537-64aaad80-46ee-11eb-98cc-f5382a848239.png">
+
 
 # 工夫したポイント
 - タスクのカード情報には患者の住所を入力することで地図を表示できるようにしたことで、自分で調べることなくどこに行けば良いのかがわかるようにしました。

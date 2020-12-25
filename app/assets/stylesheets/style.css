@@ -59,15 +59,6 @@ body {
 .header_menu_right {
   padding-right: 20px;
 }
-
-/* .listNew::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f044";
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 20px;
-}  */
-
 /* rooms#index&new */
 .main {
   background-image: url("/white_00055.jpg");
@@ -82,6 +73,11 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 30px auto;
+}
+.form_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .actions {
   font-size: 20px;
@@ -102,6 +98,7 @@ input[type="text"] {
 .room_name {
   padding: 10px auto;
   margin: 10px auto;
+  list-style-type: square;
 }
 /* button */
 .submitBtn {

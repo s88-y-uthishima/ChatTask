@@ -4,7 +4,7 @@
       <h1 class="page_heading">店舗を選択してください</h1>
       <ul class="actions">
         <% @rooms.each do |room| %>
-          <li class="room_name"><%= link_to "#{room.id}：#{room.name}", room_path(room) %></li>
+          <li class="room_name"><%= link_to "#{room.name}", room_path(room) %></li>
         <% end %>
       </ul>
     </div>

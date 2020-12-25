@@ -253,11 +253,11 @@ flex-direction: column;
   margin: 0;
   color: #262938;
 }
-.fa-pen {
+.fa-edit {
   font-size: 18px;
   color: #262938;
 }
-.fa-trash {
+.fa-trash-alt {
   font-size: 18px;
   color: #262938;
   margin-right: 10px;

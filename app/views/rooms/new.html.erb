@@ -2,12 +2,14 @@
   <div class="inner">
     <div class="form_wrapper">
       <h1 class="page_heading">新規ROOM作成</h1>
-        <div class="actions">
-          <%= form_with model: @room, local: true do |f| %>
-            <%= f.text_field :name, class: :room__name, placeholder: "店舗名を入力してください" %>
-            <%= f.submit "保存する", class: :form__btn %>
-          <% end %>
+      <%= form_with model: @room, local: true do |f| %>
+        <div class="form-group">
+          <%= f.text_field :name, class: :room__name, placeholder: "店舗名を入力してください" %>
         </div>
+        <div class="form-group text-center">
+          <%= f.submit "保存する", class: "submitBtn" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

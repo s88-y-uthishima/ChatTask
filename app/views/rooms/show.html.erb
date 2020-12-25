@@ -23,8 +23,8 @@
           <div class="task_header">
             <h2 class="task_header_title"><%= task.title %></h2>
             <div class="task_header_action">
-              <%= link_to(content_tag(:i,'', class: 'fas fa-pen'), edit_room_task_path(@room.id, task.id))%>
-              <%= link_to(content_tag(:i,'', class: 'fas fa-trash'), room_task_path(@room.id, task.id), method: :delete, data: { confirm: "#{task.title}を削除して大丈夫ですか？" }) %>
+              <%= link_to(content_tag(:i,'', class: 'fas fa-edit'), edit_room_task_path(@room.id, task.id))%>
+              <%= link_to(content_tag(:i,'', class: 'fas fa-trash-alt'), room_task_path(@room.id, task.id), method: :delete, data: { confirm: "#{task.title}を削除して大丈夫ですか？" }) %>
             </div>
           </div>
           <div class="cardWrapper">

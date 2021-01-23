@@ -6,3 +6,7 @@ ja:
         password: "パスワード"
         password_confirmation: "パスワード確認"
         email: "メールアドレス"
+      room:
+        name: "店舗名"
+      task:
+        title: "タスク名"
